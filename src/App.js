@@ -8,22 +8,15 @@ export default function App() {
     	return (
 		 	<Card 
 				key={item.id}
-				img={item.coverImg}
-				// description={item.description}
-				rating={item.stats.rating}
-				reviewCount={item.stats.reviewCount}
-				location={item.location}
-				title={item.title}
-				price={item.price}
-				openSpots={item.openSpots}
+				{...item}
 			/>
 		)
 	})
 
 	return (
 		<div>
-			{/* <Navbar />
-			<Hero /> */}
+			<Navbar />
+			<Hero />
 			<section className='cards-list'>
 				{cards}
 			</section>
